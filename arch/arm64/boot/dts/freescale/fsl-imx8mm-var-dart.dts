@@ -99,7 +99,7 @@
 			"IN1L", "Mic Jack",
 			"Playback", "CPU-Playback",
 			"CPU-Capture", "Capture";
-		status = "okay";
+		status = "disabled";
 	};
 
 	backlight: backlight {
@@ -117,7 +117,7 @@
 				     90 91 92 93 94 95 96 97 98 99
 				    100>;
 		default-brightness-level = <80>;
-		status = "okay";
+		status = "disabled";
 	};
 
 	gpio-keys {
@@ -679,7 +679,7 @@
 		enable-gpios = <&gpio2 11 GPIO_ACTIVE_HIGH>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_lvds>;
-		status = "okay";
+		status = "disabled";
 
 		display-timings {
 			lvds {
@@ -715,7 +715,7 @@
 
 	/* Capacitive touch controller */
 	ft5x06_ts: ft5x06_ts@38 {
-		status = "okay";
+		status = "disabled";
 		compatible = "edt,edt-ft5x06";
 		reg = <0x38>;
 		reset-gpios = <&gpio4 5 GPIO_ACTIVE_LOW>;
@@ -730,7 +730,7 @@
 	};
 
 	ov5640_mipi1: ov5640_mipi1@3c {
-		status = "okay";
+		status = "disabled";
 		compatible = "ovti,ov5640_mipi";
 		reg = <0x3c>;
 		pinctrl-names = "default";
@@ -787,7 +787,7 @@
 		AVDD-supply = <&ldo5_reg>;
 		CPVDD-supply = <&ldo5_reg>;
 		MICVDD-supply = <&ldo5_reg>;
-		status = "okay";
+		status = "disabled";
 		gpio-cfg = <
 			0x0018 /* GPIO1 => DMIC_CLK */
 			0xffff /* GPIO2 => don't touch */
@@ -817,7 +817,7 @@
 &mipi_csi_1 {
 	#address-cells = <1>;
 	#size-cells = <0>;
-	status = "okay";
+	status = "disabled";
 	port {
 		mipi1_sensor_ep: endpoint1 {
 			remote-endpoint = <&ov5640_mipi1_ep>;
@@ -854,7 +854,7 @@
 			<&clk IMX8MM_CLK_SAI3_DIV>;
 	assigned-clock-parents = <&clk IMX8MM_AUDIO_PLL1_OUT>;
 	assigned-clock-rates = <0>, <1536000>;
-	status = "okay";
+	status = "disabled";
 };
 
 &spdif1 {
