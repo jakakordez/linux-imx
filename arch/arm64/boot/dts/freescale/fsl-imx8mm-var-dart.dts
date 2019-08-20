@@ -759,7 +759,7 @@
 	};
 
 	/* DS1337 RTC module */
-	rtc@0x68 {
+	/*rtc@0x68 {
 		status = "okay";
 		compatible = "dallas,ds1337";
 		reg = <0x68>;
@@ -767,7 +767,9 @@
 		pinctrl-0 = <&pinctrl_rtc>;
 		interrupt-parent = <&gpio1>;
 		interrupts = <15 IRQ_TYPE_EDGE_FALLING>;
-	};
+	};*/
+
+	
 };
 
 
@@ -802,6 +804,16 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_i2c4>;
 	status = "okay";
+
+	rtc@0x51 {
+		status = "okay";
+		compatible = "i2c-rtc,pcf2129";
+		reg = <0x51>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&pinctrl_rtc>;
+		interrupt-parent = <&gpio1>;
+		interrupts = <15 IRQ_TYPE_EDGE_FALLING>;
+	};
 };
 
 &csi1_bridge {
