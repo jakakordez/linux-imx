@@ -143,6 +143,12 @@
 			linux,code = <KEY_HOME>;
 		};
 
+		user {
+			label = "User";
+			gpios = <&gpio3 14 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_ENTER>;
+		};
+
 		back {
 			label = "Back";
 			gpios = <&gpio4 6 GPIO_ACTIVE_LOW>;
@@ -506,6 +512,7 @@
 				MX8MM_IOMUXC_SAI1_TXD6_GPIO4_IO18		0x1c6
 				MX8MM_IOMUXC_SAI1_TXD1_GPIO4_IO13		0x1c6
 				MX8MM_IOMUXC_SAI1_RXD4_GPIO4_IO6		0x1c6
+				MX8MM_IOMUXC_NAND_DQS_GPIO3_IO14		0x1c6
 			>;
 		};
 
@@ -759,15 +766,15 @@
 	};
 
 	/* DS1337 RTC module */
-	/*rtc@0x68 {
-		status = "okay";
+	rtc@0x68 {
+		status = "disabled";
 		compatible = "dallas,ds1337";
 		reg = <0x68>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_rtc>;
 		interrupt-parent = <&gpio1>;
 		interrupts = <15 IRQ_TYPE_EDGE_FALLING>;
-	};*/
+	};
 
 	
 };
