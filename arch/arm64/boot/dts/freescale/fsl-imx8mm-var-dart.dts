@@ -924,7 +924,7 @@
 	pinctrl-0 = <&pinctrl_pcie0>;
 	reset-gpio = <&gpio4 7 GPIO_ACTIVE_LOW>;
 	ext_osc = <1>;
-	status = "okay";
+	status = "disabled";
 };
 
 /* Console */
@@ -980,7 +980,7 @@
 	pinctrl-2 = <&pinctrl_usdhc1_200mhz>;
 	bus-width = <4>;
 	vmmc-supply = <&reg_wifi_en>;
-	status = "okay";
+	status = "disabled";
 };
 
 /* SD */
@@ -1067,7 +1067,7 @@
 	pinctrl-0 = <&pinctrl_ecspi1>;
 	cs-gpios = <&gpio5 9 0>;
 	fsl,spi-num-chipselects = <1>;
-	status = "okay";
+	status = "disabled";
 
 	/* Resistive touch controller */
 	ads7846@0 {
