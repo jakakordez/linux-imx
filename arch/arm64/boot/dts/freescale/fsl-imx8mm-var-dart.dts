@@ -814,7 +814,7 @@
 
 	rtc@0x51 {
 		status = "okay";
-		compatible = "i2c-rtc,pcf2129";
+		compatible = "nxp,pcf2129";
 		reg = <0x51>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_rtc>;
