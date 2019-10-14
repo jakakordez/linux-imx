@@ -305,10 +305,7 @@
 		};
 
 		pinctrl_uart3: uart3grp {
-			fsl,pins = <
-				MX8MM_IOMUXC_UART3_RXD_UART3_DCE_RX		0x140
-				MX8MM_IOMUXC_UART3_TXD_UART3_DCE_TX		0x140
-			>;
+			fsl,pins = < >;
 		};
 
 		pinctrl_uart4: uart4grp {
@@ -492,12 +489,7 @@
 		};
 
 		pinctrl_ecspi1: ecspi1grp {
-			fsl,pins = <
-				MX8MM_IOMUXC_ECSPI1_SCLK_ECSPI1_SCLK		0x11
-				MX8MM_IOMUXC_ECSPI1_MOSI_ECSPI1_MOSI		0x11
-				MX8MM_IOMUXC_ECSPI1_MISO_ECSPI1_MISO		0x11
-				MX8MM_IOMUXC_ECSPI1_SS0_GPIO5_IO9		0x11
-			>;
+			fsl,pins = < >;
 		};
 
 		pinctrl_restouch: restouchgrp {
