@@ -564,7 +564,7 @@
 		enable-gpios = <&gpio2 11 GPIO_ACTIVE_HIGH>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_lvds>;
-		status = "disabled";
+		status = "okay";
 
 		display-timings {
 			lvds {
